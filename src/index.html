@@ -16,11 +16,38 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <include src="./partials/header.html"></include>
-    <include src="./partials/about.html"></include>
+    <header>
+      <div class="nav">
+        <a href="#">
+          <img class="nav__image" src="./images/logo.png" alt="logo" />
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Prices</a>
+          </li>
+          <li class="nav__item">
+            <a href="./pages/overview.html" class="nav__link">Overview</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contacts</a>
+          </li>
+        </ul>
+      </div>
+      <include src="./partials/hero.html"></include>
+    </header>
+    <include src="./partials/noise.html"></include>
     <include src="./partials/experience.html"></include>
   </body>
 </html>
