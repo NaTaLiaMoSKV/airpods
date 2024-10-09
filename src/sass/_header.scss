@@ -49,6 +49,21 @@ header {
   transform: scale(0);
   transition: transform 0.3s ease-in-out;
 }
+.nav__link--active {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.nav__link--active::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #747373;
+  bottom: 0;
+  left: 0;
+}
 
 .nav__link:hover::before {
   transform: scale(1);
