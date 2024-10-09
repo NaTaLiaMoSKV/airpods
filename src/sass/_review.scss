@@ -54,6 +54,7 @@
 .review__description--second {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 30px;
 }
 
@@ -63,8 +64,8 @@
 }
 
 .review__button.read-more {
-  width: 200px;
-  margin-bottom: 20px;
+  padding: 15px 80px;
+  margin-bottom: 5px;
 }
 
 .social-media-links {
@@ -127,7 +128,6 @@
   color: #747373;
 
   h1 {
-    // width: 420px;
     font-family: 'Poppins';
     line-height: 1;
     color: #3a3a3a;
