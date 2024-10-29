@@ -1,5 +1,4 @@
-#overview,
-#prices {
+section {
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -8,9 +7,7 @@
     rgb(243, 242, 242) 0%,
     rgb(218, 218, 218) 100%
   );
-}
-
-#overview__header,
-#prices__header {
-  height: 80px;
+  & header {
+    height: 80px;
+  }
 }
