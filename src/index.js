@@ -1,7 +1,8 @@
 import gsap from 'gsap';
 
-// const body = document.querySelector('body');
 const header = document.getElementById('overview__header');
+const width = window.innerWidth;
+console.log(width);
 
 const point1 = document.getElementById('point1');
 const point2 = document.getElementById('point2');
@@ -18,19 +19,37 @@ const image = document.querySelector('.review__image');
 
 point1.addEventListener('click', () => {
   handleImageZoomIn();
-  gsap.to(image, { scale: 2.3, x: 250, y: 280, duration: 1 });
+  if (width >= 1920) {
+    gsap.to(image, { scale: 1.5, x: 350, y: 380, duration: 1 });
+  } else if (width < 1920 && width >= 1200) {
+    gsap.to(image, { scale: 2.3, x: 250, y: 280, duration: 1 });
+  } else {
+    gsap.to(image, { scale: 2.4, x: '60%', y: '90%', duration: 1 });
+  }
   gsap.to(tooltip1, { display: 'block', opacity: 1, duration: 1 });
 });
 
 point2.addEventListener('click', () => {
   handleImageZoomIn();
-  gsap.to(image, { scale: 2.3, x: 220, y: -180, duration: 1 });
+  if (width >= 1920) {
+    gsap.to(image, { scale: 1.5, x: 220, y: -180, duration: 1 });
+  } else if (width < 1920 && width >= 1200) {
+    gsap.to(image, { scale: 2.3, x: 220, y: -180, duration: 1 });
+  } else {
+    gsap.to(image, { scale: 2.4, x: '100%', y: -180, duration: 1 });
+  }
   gsap.to(tooltip2, { display: 'block', opacity: 1, duration: 1 });
 });
 
 point3.addEventListener('click', () => {
   handleImageZoomIn();
-  gsap.to(image, { scale: 2.3, x: 250, y: -270, duration: 1 });
+  if (width >= 1920) {
+    gsap.to(image, { scale: 1.9, x: 250, y: -270, duration: 1 });
+  } else if (width < 1920 && width >= 1200) {
+    gsap.to(image, { scale: 2.3, x: 250, y: -270, duration: 1 });
+  } else {
+    gsap.to(image, { scale: 2.4, x: '100%', y: -180, duration: 1 });
+  }
   gsap.to(tooltip3, { display: 'block', opacity: 1, duration: 1 });
 });
 
@@ -39,7 +58,7 @@ function handleImageZoomIn() {
     display: 'none',
     duration: 0,
   });
-  gsap.to(header, { opacity: 0, duration: 1 });
+  if (width >= 1200) gsap.to(header, { opacity: 0, duration: 1 });
 
   gsap.to(textBlock1, { x: '-200%', duration: 1 });
   gsap.to(textBlock2, { x: '200%', duration: 1 });

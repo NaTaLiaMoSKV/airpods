@@ -5,7 +5,6 @@ header {
     rgb(243, 242, 242) 0%,
     rgb(218, 218, 218) 100%
   );
-  padding: 35px 50px;
   height: 800px;
 }
 
@@ -16,9 +15,8 @@ header {
   align-items: center;
 }
 
-.nav__image {
-  width: 30px;
-  height: 30px;
+.nav__logo {
+  display: none;
 }
 
 .nav__list {
@@ -68,4 +66,19 @@ header {
 .nav__link:hover::before {
   transform: scale(1);
   transform-origin: left;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    display: block;
+  }
+  .nav__image {
+    width: 30px;
+    height: 30px;
+  }
+
+  header {
+    padding: 35px 50px;
+    height: 800px;
+  }
 }

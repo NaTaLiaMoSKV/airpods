@@ -1,0 +1,28 @@
+section {
+  width: 100%;
+  background: linear-gradient(
+    270deg,
+    rgb(243, 242, 242) 0%,
+    rgb(218, 218, 218) 100%
+  );
+  & header {
+    height: 80px;
+    padding: 30px 20px;
+  }
+}
+
+#contacts {
+  overflow: hidden;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    overflow: hidden;
+    height: 100vh;
+
+    & header {
+      padding: 35px 50px;
+    }
+  }
+}
